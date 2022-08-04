@@ -1,4 +1,7 @@
-# hello-world
+# VUE3-boilerplate
+
+## Supports
+vue3, vue-router, vuex, antd
 
 ## Project setup
 ```
