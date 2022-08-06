@@ -1,15 +1,26 @@
 import { createApp } from 'vue'
 
-import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/antd.css';
+
 
 import App from './App.vue'
+
+//import 'vuetify/styles'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
+
+// QuillEditor
+import '@vueup/vue-quill/dist/vue-quill.snow.css';
+
+// global style (main, body)
+import '@/assets/main.scss'
 
 import router from './router'
 import store from './store'
 
+loadFonts()
+
 createApp(App)
-    .use(router)
-    .use(store)
-    .use(Antd)
-    .mount('#app');
+  .use(vuetify)
+  .use(router)
+  .use(store)
+  .mount('#app')

@@ -1,21 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import HomePage from './pages/Home'
-import AboutPage from './pages/About'
+import Home from '@/pages/Home'
+import Projects from '@/pages/Projects'
+import Project from '@/pages/Project'
+import EditorExample from '@/pages/EditorExample'
 
-// 2. Define some routes
-// Each route should map to a component.
-// We'll talk about nested routes later.
+// router hook guide: https://adeuran.tistory.com/14
 const routes = [
-  { path: '/home', component: HomePage },
-  { path: '/time', component: AboutPage },
+  { path: '/', component: Home },
+  { path: '/projects', component: Projects },
+  { path: '/projects/:id', component: Project },
+  { path: '/editor', component: EditorExample },
 ]
 
 const router = createRouter({
-    // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-    history: createWebHistory(),
-    routes, // short for `routes: routes`
-  })
-
+  // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
+  history: createWebHistory(),
+  routes, // short for `routes: routes`
+})
 
 export default router;

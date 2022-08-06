@@ -1,13 +1,20 @@
 <template>
-    <a-layout>
-        <a-layout-header>
-            <slot name="header"></slot>
-        </a-layout-header>
-    </a-layout>
+    <v-app>
+        <BasicHeader/>
+
+        <v-main>
+            <slot name="main"></slot>
+        </v-main>
+    </v-app>
 </template>
   
 <script>
+import BasicHeader from '@/components/BasicHeader.vue'
+
 export default {
+    components: {
+        BasicHeader
+    },
     name: 'BasicTemplate',
 }
 </script>

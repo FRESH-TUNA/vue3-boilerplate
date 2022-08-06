@@ -1,7 +1,7 @@
 <template>
     <BasicTemplate>
       <template v-slot:header>
-        <BasicHeader/>
+        <BasicHeader title="FRESHTUNA"/>
       </template>
     </BasicTemplate>
 </template>
